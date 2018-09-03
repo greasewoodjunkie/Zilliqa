@@ -2391,6 +2391,8 @@ bool Lookup::DeleteTxnShardMap(uint32_t shardId)
 
 void Lookup::SenderTxnBatchThread()
 {
+    LOG_MARKER();
+
     auto main_func = [this]() mutable -> void {
         uint32_t nShard;
         while (true)
